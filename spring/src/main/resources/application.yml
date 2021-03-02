@@ -1,0 +1,8 @@
+library:
+  config:
+    address: Ukraine
+    hours: 9-17
+  names:
+    - lib1
+    - lib2
+    - lib3
