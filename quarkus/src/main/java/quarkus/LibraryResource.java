@@ -23,6 +23,6 @@ public class LibraryResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String libraryName() {
-        return libraryConfiguration.getName();
+        return libraryConfiguration.name();
     }
 }

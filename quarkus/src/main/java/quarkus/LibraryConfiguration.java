@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @ConfigProperties(prefix = "library")
-@Getter
-@Setter
-public class LibraryConfiguration {
-    private String name;
+public interface LibraryConfiguration {
+    String name();
 }
