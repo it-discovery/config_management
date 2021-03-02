@@ -1,6 +1,7 @@
 package quarkus;
 
 import org.eclipse.microprofile.config.Config;
+import org.eclipse.microprofile.config.ConfigProvider;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import javax.inject.Inject;
@@ -17,12 +18,13 @@ public class LibraryResource {
 
 //    @Inject
 //    private Config config;
-    @Inject
-    private LibraryConfiguration libraryConfiguration;
+//    @Inject
+//    private LibraryConfiguration libraryConfiguration;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String libraryName() {
-        return libraryConfiguration.name();
+        Config config = ConfigProvider.getConfig();
+        return config.getValue("library.name", String.class);
     }
 }
