@@ -8,6 +8,8 @@ import java.util.Properties;
 
 public class Bootstrap {
     public static void main(String[] args) throws IOException {
+//        System.getProperty("library.name");
+//        System.getenv("library.name");
         Properties properties = new Properties();
         Path path = Path.of("jdk/src/main/resources/application.properties");
 
