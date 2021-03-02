@@ -15,12 +15,14 @@ public class LibraryResource {
 //    @ConfigProperty(name = "library.name")
 //    private String libraryName;
 
+//    @Inject
+//    private Config config;
     @Inject
-    private Config config;
+    private LibraryConfiguration libraryConfiguration;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String libraryName() {
-        return config.getValue("library.name", String.class);
+        return libraryConfiguration.getName();
     }
 }
